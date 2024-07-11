@@ -1,9 +1,11 @@
 let str = "some test string";
 let firstStr = str[0];
-console.log(firstStr) //Получить первую и последнюю буквы строки
+let lastStr = str[str.length - 1]
+console.log(firstStr, lastStr) //Получить первую и последнюю буквы строки
 
-let strHigh = 'str'[0].toUpperCase();
-console.log(strHigh); //Сделать первую и последнюю буквы в верхнем регистре
+let strHigh1 = str.charAt(0).toUpperCase();
+let strHigh2 = str.charAt(str.length - 1).toUpperCase()
+console.log(strHigh1, strHigh2); //Сделать первую и последнюю буквы в верхнем регистре
 
 let founder = str.indexOf('string');
 console.log(founder); //Найти положение слова ‘string’ в строке
@@ -17,8 +19,8 @@ console.log(simvols1) //Получить строку с 5-го символа �
 let simvols2 = str.slice(-12, -6);
 console.log(simvols2) //Получить строку с 5-го по 9-й символы
 
-let newString = str + str[5];
-console.log(newString);
+let newString = str.slice(0, -6);;
+console.log(newString); //Получить новую строку из исходной путем удаления последних 6-и символов
 
 let z = "20";
 let x = 16;
